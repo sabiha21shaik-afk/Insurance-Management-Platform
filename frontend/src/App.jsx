@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import Customers from "./pages/Customers";
 import Policies from "./pages/Policies";
+import Claims from "./pages/Claims";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path="/" element={<Dashboard />} />
               <Route path="/customers" element={<Customers />} />
               <Route path="/policies" element={<Policies />} />
+              <Route path="/claims" element={<Claims />} />
             </Routes>
           </div>
         </div>

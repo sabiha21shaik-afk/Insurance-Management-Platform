@@ -10,7 +10,7 @@ function Sidebar() {
       }}
     >
       <h3 className="text-white text-center py-4">
-        🚀 Dashboard
+        🚀 Insurance Hub
       </h3>
 
       <div className="list-group list-group-flush">
@@ -33,6 +33,13 @@ function Sidebar() {
           to="/policies"
         >
           📜 Policies
+        </Link>
+
+        <Link
+          className="list-group-item list-group-item-action"
+          to="/claims"
+        >
+          📝 Claims
         </Link>
       </div>
     </div>

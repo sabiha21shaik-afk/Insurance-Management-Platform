@@ -1,3 +1,25 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary: #4f7cff;
+  --primary-dark: #3563eb;
+
+  --bg: #f6f8fc;
+  --card: #ffffff;
+
+  --text: #1e293b;
+  --text-light: #64748b;
+
+  --border: #e8edf5;
+
+  --success: #a7e3c0;
+  --warning: #ffe3a3;
+  --danger: #ffc9c9;
+
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,46 +27,99 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
+html,
+body,
+#root {
+  width: 100%;
   min-height: 100vh;
-  background: linear-gradient(
-    135deg,
-    #4f46e5 0%,
-    #2563eb 30%,
-    #22c55e 65%,
-    #facc15 100%
-  );
-  background-size: 400% 400%;
-  animation: gradientMove 12s ease infinite;
 }
 
-@keyframes gradientMove {
-  0% {
-    background-position: left;
-  }
-  50% {
-    background-position: right;
-  }
-  100% {
-    background-position: left;
-  }
+body {
+  background: var(--bg);
+  color: var(--text);
 }
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cfd8e8;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b7c4db;
+}
+
+/* Cards */
 
 .card {
-  border: none;
-  border-radius: 20px;
-  transition: 0.4s;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-4px);
 }
 
-.list-group-item {
+/* Buttons */
+
+.btn-primary {
+  background: var(--primary);
+  border: none;
+  border-radius: 12px;
+  padding: 10px 22px;
   font-weight: 600;
 }
 
-.list-group-item:hover {
-  background: #dbeafe;
-  color: #2563eb;
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+/* Inputs */
+
+.form-control,
+.form-select {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 12px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: none;
+  border-color: var(--primary);
+}
+
+/* Tables */
+
+.table {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.table thead {
+  background: #f8faff;
+}
+
+.table th {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.table td {
+  color: var(--text-light);
+}
+
+/* Badges */
+
+.badge {
+  padding: 8px 12px;
+  border-radius: 50px;
 }

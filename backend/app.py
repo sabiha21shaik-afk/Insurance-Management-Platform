@@ -12,6 +12,7 @@ from routes.auth import auth_bp
 from routes.customer import customer_bp
 from routes.policy import policy_bp
 from routes.claim import claim_bp
+from routes.payment import payment_bp
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -28,6 +29,7 @@ app.register_blueprint(auth_bp)
 app.register_blueprint(customer_bp)
 app.register_blueprint(policy_bp)
 app.register_blueprint(claim_bp)
+app.register_blueprint(payment_bp)
 
 
 @app.route("/")
